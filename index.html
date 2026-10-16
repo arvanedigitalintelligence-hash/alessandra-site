@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://www.alessandraelviraestetica.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alessandra Elvira Estética">
+<meta property="og:description" content="Estética regenerativa com protocolos individualizados: drenagem linfática, protocolos corporais, botox, preenchimentos e bioestimuladores. Agende sua avaliação pelo WhatsApp.">
+<meta property="og:url" content="https://www.alessandraelviraestetica.com/">
+<meta property="og:image" content="https://www.alessandraelviraestetica.com/assets/alessandra.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.png">
+<title>Alessandra Elvira Estética</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Estética regenerativa com protocolos individualizados: drenagem linfática, protocolos corporais, botox, preenchimentos e bioestimuladores. Agende sua avaliação pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: clínica clara e calma — uma forma orgânica 3D em tons de pele e pérola
+   respira no hero; tratamentos em cartões filtráveis; método e etapas em faixas. */
+:root{
+  --porcelana:#f6f1ee;   /* fundo */
+  --nevoa:#ebe3df;       /* faixas */
+  --petroleo:#0f3a3a;    /* texto e cor da marca */
+  --petroleo-2:#4f6b6a;  /* texto secundário */
+  --rosa:#e9c9c3;        /* acento suave */
+  --rosa-forte:#c98f86;  /* destaque em detalhes */
+  --linha:rgba(15,58,58,.14);
+  --f-display:"Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-corpo:"Hanken Grotesk", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--porcelana);color:var(--petroleo);font-family:var(--f-corpo);font-size:17px;line-height:1.65;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--porcelana)}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rosa-forte);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:1220px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.eyebrow{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rosa-forte);font-weight:600}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+h1 em,h2 em{font-style:italic;color:var(--rosa-forte)}
+p{margin:0}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:1em 1.7em;border-radius:999px;font-size:.88rem;letter-spacing:.04em;font-weight:500;text-decoration:none;transition:transform .3s,background .3s,color .3s,border-color .3s}
+.btn-cheio{background:var(--petroleo);color:var(--porcelana)}
+.btn-cheio:hover{background:#185252;transform:translateY(-2px)}
+.btn-linha{border:1px solid var(--petroleo);color:var(--petroleo)}
+.btn-linha:hover{background:var(--petroleo);color:var(--porcelana)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Cabeçalho */
+.topo{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .4s,box-shadow .4s}
+.topo.solido{background:rgba(246,241,238,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:16px}
+.topo .logo img{height:44px;width:auto}
+.topo nav{display:flex;gap:30px;font-size:.9rem}
+.topo nav a{text-decoration:none;color:var(--petroleo-2);transition:color .3s}
+.topo nav a:hover{color:var(--petroleo)}
+.topo .btn{padding:.75em 1.25em}
+@media (max-width:920px){.topo nav{display:none}}
+@media (max-width:480px){.topo .btn span{display:none}.topo .btn{padding:.75em}.topo .logo img{height:36px}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;isolation:isolate;padding-block:130px 70px}
+#forma{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;z-index:0;pointer-events:none}
+main,footer{position:relative;z-index:1}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(30px,5vw,80px);align-items:center}
+.hero .texto{display:grid;gap:26px}
+.hero h1{font-size:clamp(3.4rem,8.6vw,7.6rem)}
+.hero h1 .linha{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.08em}
+.hero h1 .linha>span{display:inline-block}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px}
+.hero .tags span{border:1px solid var(--linha);border-radius:999px;padding:.35em 1em;font-size:.82rem;background:rgba(246,241,238,.6)}
+.hero .sub{color:var(--petroleo-2);max-width:42ch;font-size:1.1rem}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.hero .retrato{position:relative;justify-self:end;width:min(100%,430px)}
+.hero .retrato img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 18px 18px;box-shadow:0 40px 80px rgba(15,58,58,.18)}
+.hero .retrato .nota{position:absolute;left:-34px;bottom:34px;background:var(--porcelana);border-radius:18px;padding:16px 20px;box-shadow:0 20px 50px rgba(15,58,58,.14);display:grid;gap:2px}
+.hero .retrato .nota b{font-family:var(--f-display);font-size:2.4rem;font-weight:400;line-height:1}
+.hero .retrato .nota span{font-size:.78rem;color:var(--petroleo-2);max-width:16ch;line-height:1.3}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero .retrato{justify-self:start;width:min(100%,360px)}.hero .retrato .nota{left:auto;right:-8px}}
+
+/* Manifesto: palavras acendem com a rolagem */
+.manifesto{padding-block:clamp(90px,14vw,200px)}
+.manifesto .wrap{display:grid;gap:28px;max-width:1100px}
+.frase{font-family:var(--f-display);font-size:clamp(2.1rem,5.2vw,4.6rem);line-height:1.12;text-wrap:balance}
+.frase .p{opacity:.2;transition:none}
+.frase .p.rosa{color:var(--rosa-forte);font-style:italic}
+.frase.acesa .p{opacity:1}
+
+/* Faixa de tratamentos que corre com a rolagem */
+.faixa{overflow:hidden;padding-block:clamp(30px,5vw,60px);border-block:1px solid var(--linha);background:rgba(246,241,238,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.faixa-trilho{display:flex;gap:.6em;white-space:nowrap;width:max-content;font-family:var(--f-display);font-size:clamp(2.6rem,7vw,6rem);line-height:1;padding-left:var(--gutter-l)}
+.faixa-trilho i{color:var(--rosa-forte)}
+.faixa-trilho span{opacity:.9}
+
+/* Tratamentos */
+.tratamentos{padding-block:clamp(80px,11vw,150px)}
+.tratamentos .cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px}
+.tratamentos .cab p{max-width:40ch;color:var(--petroleo-2)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.filtros button{font:inherit;font-size:.86rem;border:1px solid var(--linha);background:transparent;color:var(--petroleo);border-radius:999px;padding:.55em 1.2em;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.filtros button[aria-pressed="true"]{background:var(--petroleo);color:var(--porcelana);border-color:var(--petroleo)}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:18px}
+.cartao{display:grid;grid-template-rows:auto 1fr;background:#fffdfb;border-radius:22px;overflow:hidden;box-shadow:0 1px 0 var(--linha);transition:transform .45s,box-shadow .45s}
+.cartao:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(15,58,58,.12)}
+.cartao .img{overflow:hidden;aspect-ratio:4/5}
+.cartao img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.cartao:hover img{transform:scale(1.06)}
+.cartao .corpo{display:grid;gap:10px;padding:22px 22px 24px;align-content:start}
+.cartao .cat{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rosa-forte);font-weight:600}
+.cartao h3{font-size:1.6rem}
+.cartao p{color:var(--petroleo-2);font-size:.95rem}
+.cartao a{margin-top:6px;font-size:.88rem;font-weight:500;text-decoration:none;border-bottom:1px solid var(--rosa-forte);justify-self:start;padding-bottom:2px}
+.cartao a:hover{color:var(--rosa-forte)}
+
+/* Tecnologia + vídeo */
+.tecnologia{background:var(--petroleo);color:var(--porcelana);padding-block:clamp(80px,11vw,150px);overflow:hidden}
+.tecnologia .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,100px);align-items:center}
+.tecnologia .video{position:relative;border-radius:999px 999px 24px 24px;overflow:hidden;max-width:400px;aspect-ratio:9/16;background:#0b2b2b}
+.tecnologia video{width:100%;height:100%;object-fit:cover}
+.tecnologia .video span{position:absolute;left:16px;bottom:16px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;background:rgba(15,58,58,.7);padding:.5em .9em;border-radius:999px}
+.tecnologia h2 em{color:var(--rosa)}
+.tecnologia .eyebrow{color:var(--rosa)}
+.pilares{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px;margin-top:44px}
+.pilar{display:grid;gap:8px;border-top:1px solid rgba(246,241,238,.2);padding-top:18px}
+.pilar h3{font-size:1.6rem}
+.pilar p{color:#bcd0cf;font-size:.96rem}
+@media (max-width:860px){.tecnologia .wrap{grid-template-columns:1fr}.tecnologia .video{max-width:320px}.pilares{grid-template-columns:1fr}}
+
+/* Método */
+.metodo{padding-block:clamp(80px,11vw,150px)}
+.metodo .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:start}
+.metodo .foto{position:sticky;top:110px}
+.metodo .foto img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.metodo .texto{display:grid;gap:22px}
+.metodo .texto>p{color:var(--petroleo-2);max-width:48ch}
+.qa{display:grid;gap:0;margin-top:14px;border-top:1px solid var(--linha)}
+.qa div{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:20px;padding-block:24px;border-bottom:1px solid var(--linha)}
+.qa h3{font-size:1.45rem}
+.qa p{color:var(--petroleo-2)}
+@media (max-width:860px){.metodo .wrap{grid-template-columns:1fr}.metodo .foto{position:static;max-width:440px}.qa div{grid-template-columns:1fr;gap:6px}}
+
+/* Depoimento */
+.depo{background:var(--rosa);padding-block:clamp(80px,11vw,140px)}
+.depo .wrap{max-width:980px;display:grid;gap:26px}
+.depo blockquote{margin:0;font-family:var(--f-display);font-size:clamp(1.7rem,3.8vw,3rem);line-height:1.2;text-wrap:balance}
+.depo cite{font-style:normal;font-size:.9rem}
+.depo cite b{font-weight:600}
+
+/* Sobre */
+.sobre{padding-block:clamp(80px,11vw,150px)}
+.sobre .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,90px);align-items:center}
+.sobre .foto img{border-radius:24px 24px 999px 999px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.sobre .texto{display:grid;gap:22px}
+.sobre .texto>p{color:var(--petroleo-2);max-width:50ch}
+.numeros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:10px}
+.numeros div{border-top:1px solid var(--linha);padding-top:14px;display:grid;gap:2px}
+.numeros b{font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1.1}
+.numeros span{color:var(--petroleo-2);font-size:.9rem}
+@media (max-width:860px){.sobre .wrap{grid-template-columns:1fr}.sobre .foto{max-width:420px}}
+
+/* Etapas */
+.etapas{background:var(--nevoa);padding-block:clamp(80px,11vw,140px)}
+.etapas ol{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;counter-reset:etapa}
+.etapas li{counter-increment:etapa;display:grid;gap:10px;align-content:start;padding:26px 22px;border-radius:20px;background:var(--porcelana)}
+.etapas li::before{content:counter(etapa,decimal-leading-zero);font-family:var(--f-display);font-size:2.6rem;line-height:1;color:var(--rosa-forte)}
+.etapas h3{font-size:1.5rem}
+.etapas p{color:var(--petroleo-2);font-size:.95rem}
+@media (max-width:900px){.etapas ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.etapas ol{grid-template-columns:1fr}}
+
+/* Final */
+.final{padding-block:clamp(90px,12vw,170px);text-align:center}
+.final .wrap{display:grid;gap:26px;justify-items:center}
+.final h2{font-size:clamp(2.6rem,6.4vw,5.4rem);max-width:14ch}
+.final p{color:var(--petroleo-2);max-width:44ch}
+.final .contato b{color:var(--petroleo);font-weight:600;user-select:all}
+
+footer{background:var(--petroleo);color:#bcd0cf;padding-block:44px;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:22px 40px;justify-content:space-between;align-items:center}
+footer img{height:38px;width:auto}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer a{text-decoration:none;color:var(--porcelana)}
+footer a:hover{color:var(--rosa)}
+
+.ig-topo{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--linha);transition:color .3s,border-color .3s,transform .3s}
+.ig-topo:hover{color:var(--rosa-forte);border-color:var(--rosa-forte);transform:translateY(-2px)}
+.ig-topo svg{width:20px;height:20px}
+.topo-acoes{display:flex;gap:10px;align-items:center}
+.final .botoes{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.flutuante{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(15,58,58,.3);transition:transform .3s}
+.flutuante:hover{transform:scale(1.08)}
+.flutuante svg{width:30px;height:30px;fill:#fff}
+.flutuante.ig{bottom:calc(88px + env(safe-area-inset-bottom,0px));background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+.flutuante.ig svg{fill:none;width:28px;height:28px}
+@media (prefers-reduced-motion:reduce){.frase .p{opacity:1}*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Alessandra Elvira Estética, início"><img src="assets/logo.webp" alt="Alessandra Elvira Estética" width="900" height="293"></a>
+    <nav aria-label="Principal">
+      <a href="#tratamentos">Tratamentos</a><a href="#metodo">Método Essenza</a><a href="#sobre">Sobre</a><a href="#como-funciona">Como funciona</a>
+    </nav>
+    <div class="topo-acoes">
+    <a class="ig-topo" href="https://www.instagram.com/alessandra_elvira" target="_blank" rel="noopener" aria-label="Instagram @alessandra_elvira"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a class="btn btn-cheio" href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+      <span>Agendar avaliação</span></a>
+    </div>
+  </div>
+</header>
+
+<canvas id="forma" aria-hidden="true"></canvas>
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo-hero">
+    <div class="wrap">
+      <div class="texto">
+        <p class="eyebrow">Estética regenerativa</p>
+        <h1 id="titulo-hero"><span class="linha"><span>Estética</span></span><span class="linha"><span>pensada</span></span><span class="linha"><span><em>para você.</em></span></span></h1>
+        <div class="tags"><span>Corporais</span><span>Drenagem</span><span>Estética avançada</span></div>
+        <p class="sub">Tratamentos e protocolos desenvolvidos a partir de uma abordagem individualizada, respeitando os seus objetivos.</p>
+        <div class="acoes">
+          <a class="btn btn-cheio" href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar minha avaliação</a>
+          <a class="btn btn-linha" href="#tratamentos">Ver tratamentos</a>
+        </div>
+      </div>
+      <div class="retrato">
+        <img src="assets/alessandra.webp" alt="Alessandra Elvira realizando drenagem em sua clínica" width="1087" height="1447" fetchpriority="high">
+        <div class="nota"><b>9 anos</b><span>dedicados à estética regenerativa</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto" aria-labelledby="titulo-manifesto">
+    <div class="wrap">
+      <p class="eyebrow" id="titulo-manifesto">Protocolos personalizados</p>
+      <p class="frase" id="frase">Nenhum tratamento é igual ao outro. Cada protocolo é desenhado depois de uma avaliação profunda, <span class="rosa">único como a sua história.</span></p>
+    </div>
+  </section>
+
+  <section class="tratamentos" id="tratamentos" aria-labelledby="titulo-trat">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <p class="eyebrow">Tratamentos</p>
+          <h2 id="titulo-trat">Cuidado que você <em>sente.</em></h2>
+        </div>
+        <p>Cada atendimento é definido de acordo com as necessidades e os objetivos de cada cliente, depois de uma avaliação.</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar tratamentos">
+        <button type="button" id="f-todos" data-f="todos" aria-pressed="true">Todos</button>
+        <button type="button" id="f-drenagem" data-f="drenagem" aria-pressed="false">Drenagem</button>
+        <button type="button" id="f-corporal" data-f="corporal" aria-pressed="false">Corporal</button>
+        <button type="button" id="f-avancada" data-f="avancada" aria-pressed="false">Estética avançada</button>
+      </div>
+      <div class="grade" id="grade">
+        <article class="cartao" data-cat="drenagem">
+          <div class="img"><img src="assets/drenagem.webp" alt="Alessandra fazendo drenagem linfática nas pernas de uma cliente" loading="lazy"></div>
+          <div class="corpo"><span class="cat">Drenagem</span><h3>Drenagem linfática especializada</h3><p>Técnica manual com precisão clínica para reduzir edemas e trazer bem-estar imediato.</p><a href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Quero%20saber%20mais%20sobre%20a%20drenagem%20linf%C3%A1tica." target="_blank" rel="noopener">Quero saber mais</a></div>
+        </article>
+        <article class="cartao" data-cat="corporal">
+          <div class="img"><img src="assets/tecnologia.webp" alt="Aparelho de tratamento corporal da clínica" loading="lazy"></div>
+          <div class="corpo"><span class="cat">Corporal</span><h3>Protocolo corporal integrado</h3><p>Tecnologia e técnicas manuais juntas para remodelagem e regeneração dos tecidos.</p><a href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Quero%20saber%20mais%20sobre%20o%20protocolo%20corporal." target="_blank" rel="noopener">Quero saber mais</a></div>
+        </article>
+        <article class="cartao" data-cat="avancada">
+          <div class="img"><img src="assets/facial.webp" alt="Procedimento facial com luminária de LED na clínica" loading="lazy"></div>
+          <div class="corpo"><span class="cat">Estética avançada</span><h3>Procedimento facial premium</h3><p>Protocolo exclusivo para devolver vitalidade e brilho natural à pele com ativos regeneradores.</p><a href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Quero%20saber%20mais%20sobre%20o%20procedimento%20facial." target="_blank" rel="noopener">Quero saber mais</a></div>
+        </article>
+        <article class="cartao" data-cat="avancada">
+          <div class="img"><img src="assets/injetaveis.webp" alt="Alessandra aplicando procedimento injetável" loading="lazy"></div>
+          <div class="corpo"><span class="cat">Estética avançada</span><h3>Botox e preenchimentos</h3><p>Injetáveis para suavizar linhas de expressão e restaurar o volume labial e facial.</p><a href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Quero%20saber%20mais%20sobre%20botox%20e%20preenchimentos." target="_blank" rel="noopener">Quero saber mais</a></div>
+        </article>
+        <article class="cartao" data-cat="avancada corporal">
+          <div class="img"><img src="assets/bioestimulador.webp" alt="Aplicação de bioestimulador na clínica" loading="lazy"></div>
+          <div class="corpo"><span class="cat">Estética avançada</span><h3>Bioestimuladores</h3><p>Os bioestimuladores mais modernos do mercado para regenerar tecidos e rejuvenescer com naturalidade.</p><a href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Quero%20saber%20mais%20sobre%20bioestimuladores." target="_blank" rel="noopener">Quero saber mais</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa-trilho" id="faixa"><span>Drenagem linfática</span><i>✦</i><span>Bioestimuladores</span><i>✦</i><span>Botox</span><i>✦</i><span>Preenchimentos</span><i>✦</i><span>Protocolos corporais</span><i>✦</i><span>Facial premium</span><i>✦</i><span>Drenagem linfática</span><i>✦</i><span>Bioestimuladores</span></div>
+  </div>
+
+  <section class="tecnologia" aria-labelledby="titulo-tec">
+    <div class="wrap">
+      <div class="video">
+        <video src="assets/procedimento.mp4" poster="assets/procedimento-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Alessandra preparando uma aplicação"></video>
+        <span>Na clínica</span>
+      </div>
+      <div>
+        <p class="eyebrow">Por que aqui</p>
+        <h2 id="titulo-tec">Tecnologia a favor da <em>pele.</em></h2>
+        <div class="pilares">
+          <div class="pilar"><h3>Um novo olhar para o autocuidado</h3><p>Tecnologia de ponta e um ambiente acolhedor, para que cada momento seja focado no seu bem-estar.</p></div>
+          <div class="pilar"><h3>Estética avançada</h3><p>Bioestimuladores modernos para regenerar tecidos e promover um rejuvenescimento natural.</p></div>
+          <div class="pilar"><h3>Único como a sua história</h3><p>Nenhum tratamento é igual ao outro. Cada protocolo nasce de uma avaliação profunda.</p></div>
+          <div class="pilar"><h3>Atenção plena em você</h3><p>Horários espaçados para garantir exclusividade. Qualidade antes de quantidade.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="metodo" id="metodo" aria-labelledby="titulo-metodo">
+    <div class="wrap">
+      <div class="foto"><img src="assets/essenza.webp" alt="Mãos da Alessandra durante uma massagem corporal" loading="lazy"></div>
+      <div class="texto">
+        <p class="eyebrow">Protocolo exclusivo</p>
+        <h2 id="titulo-metodo">Método Essenza <em>Regenerativa</em></h2>
+        <p>Uma abordagem técnica e individualizada para resultados regenerativos e harmoniosos, respeitando a sua essência.</p>
+        <div class="qa">
+          <div><h3>Para quem é</h3><p>Para quem busca renovação celular e melhora da textura da pele, com supervisão clínica especializada.</p></div>
+          <div><h3>Objetivo</h3><p>Restaurar a vitalidade e a harmonia das áreas tratadas com protocolos exclusivos de estética regenerativa.</p></div>
+          <div><h3>Como funciona</h3><p>Técnicas avançadas e ativos de alta performance, em sessões personalizadas conforme a sua avaliação.</p></div>
+          <div><h3>Importante saber</h3><p>Requer avaliação prévia. Protocolos seguros e aprovados, com orientações pós-procedimento individualizadas.</p></div>
+        </div>
+        <div><a class="btn btn-cheio" href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Essenza%20Regenerativa." target="_blank" rel="noopener">Quero conhecer o método</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="depo" aria-labelledby="titulo-depo">
+    <div class="wrap">
+      <p class="eyebrow" id="titulo-depo" style="color:var(--petroleo)">Experiências de quem já passou por aqui</p>
+      <blockquote>“A ciência e a tecnologia se encontram aqui em perfeita harmonia. Tratamentos personalizados que realmente atendem às minhas necessidades e elevam minha autoestima de forma natural.”</blockquote>
+      <cite><b>Beatriz Oliveira</b> · Protocolo Estética Avançada</cite>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre" aria-labelledby="titulo-sobre">
+    <div class="wrap">
+      <div class="foto"><img src="assets/avancada.webp" alt="Alessandra Elvira em atendimento, com o painel da clínica ao fundo" loading="lazy"></div>
+      <div class="texto">
+        <p class="eyebrow">Alessandra Elvira</p>
+        <h2 id="titulo-sobre">Experiência, cuidado e <em>propósito</em> em cada atendimento.</h2>
+        <p>Com experiência em estética regenerativa e formação em biomedicina, Alessandra Elvira conduz sua clínica com metodologias próprias, focadas em resultados reais e transformadores.</p>
+        <div class="numeros">
+          <div><b>9 anos</b><span>em estética regenerativa</span></div>
+          <div><b>Pós-graduação</b><span>em estética avançada</span></div>
+          <div><b>Biomedicina</b><span>em conclusão</span></div>
+          <div><b>Protocolos</b><span>personalizados</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="etapas" id="como-funciona" aria-labelledby="titulo-etapas">
+    <div class="wrap">
+      <p class="eyebrow">Como funciona</p>
+      <h2 id="titulo-etapas">Sua experiência, <em>passo a passo.</em></h2>
+      <ol>
+        <li><h3>Contato</h3><p>Você fala com a Alessandra pelo WhatsApp e conta o que está buscando.</p></li>
+        <li><h3>Avaliação</h3><p>Análise detalhada das suas necessidades, no consultório.</p></li>
+        <li><h3>Planejamento</h3><p>Definição conjunta dos protocolos e do cronograma de sessões.</p></li>
+        <li><h3>Acompanhamento</h3><p>Evolução e resultados acompanhados de perto, sessão a sessão.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="titulo-final">
+    <div class="wrap">
+      <p class="eyebrow">Não sabe qual tratamento escolher?</p>
+      <h2 id="titulo-final">Seu momento de cuidado pode <em>começar aqui.</em></h2>
+      <p>Você não precisa decidir sozinha. O primeiro passo é entender suas necessidades e objetivos.</p>
+      <div class="botoes"><a class="btn btn-cheio" href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Conversar com a Alessandra</a>
+      <a class="btn btn-linha" href="https://www.instagram.com/alessandra_elvira" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>Seguir no Instagram</a></div>
+      <p class="contato">WhatsApp: <b>(19) 99669-6703</b></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-claro.webp" alt="Alessandra Elvira Estética" width="900" height="293" loading="lazy">
+    <nav aria-label="Rodapé">
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="https://wa.me/5519996696703" target="_blank" rel="noopener">WhatsApp (19) 99669-6703</a>
+      <a href="https://www.instagram.com/alessandra_elvira" target="_blank" rel="noopener">Instagram @alessandra_elvira</a>
+    </nav>
+    <p>© <span id="ano">2026</span> Alessandra Elvira Estética · Site por <a href="https://www.arvanedigitalintelligence.com" target="_blank" rel="noopener">Arvane Digital Intelligence</a></p>
+  </div>
+</footer>
+
+<a class="flutuante ig" href="https://www.instagram.com/alessandra_elvira" target="_blank" rel="noopener" aria-label="Seguir no Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg></a>
+<a class="flutuante" href="https://wa.me/5519996696703?text=Ol%C3%A1%2C%20Alessandra!%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  var topo = document.getElementById('topo');
+  function aoRolar(){ topo.classList.toggle('solido', window.scrollY > 40); }
+  aoRolar(); window.addEventListener('scroll', aoRolar, {passive:true});
+
+  /* Filtro de tratamentos */
+  var botoes = document.querySelectorAll('.filtros button');
+  var cartoes = document.querySelectorAll('.cartao');
+  botoes.forEach(function(b){
+    b.addEventListener('click', function(){
+      botoes.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      var f = b.dataset.f;
+      cartoes.forEach(function(c){ c.hidden = !(f === 'todos' || c.dataset.cat.split(' ').indexOf(f) > -1); });
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    });
+  });
+
+  /* Vídeo: só toca quando visível */
+  var video = document.querySelector('.tecnologia video');
+  if (video) {
+    if (reduz) { video.removeAttribute('autoplay'); video.pause(); }
+    new IntersectionObserver(function(en){ if (reduz) return; en[0].isIntersecting ? video.play().catch(function(){}) : video.pause(); }).observe(video);
+  }
+
+  /* ---------- Cena 3D: forma orgânica que respira (pele em regeneração) ---------- */
+  try {
+    if (!window.THREE) throw new Error('three ausente');
+    var canvas = document.getElementById('forma');
+    var renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(32, 1, .1, 100); camera.position.z = 8;
+    var uni = { uT:{value:0}, uForca:{value:.32}, uRolagem:{value:0} };
+    var vert = [
+      'uniform float uT; uniform float uForca; uniform float uRolagem;',
+      'varying vec3 vN; varying vec3 vV; varying float vD;',
+      // ruído simplex 3D (Ashima)
+      'vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;} vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}',
+      'vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);} vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}',
+      'float snoise(vec3 v){const vec2 C=vec2(1.0/6.0,1.0/3.0);const vec4 D=vec4(0.0,0.5,1.0,2.0);vec3 i=floor(v+dot(v,C.yyy));vec3 x0=v-i+dot(i,C.xxx);vec3 g=step(x0.yzx,x0.xyz);vec3 l=1.0-g;vec3 i1=min(g.xyz,l.zxy);vec3 i2=max(g.xyz,l.zxy);vec3 x1=x0-i1+C.xxx;vec3 x2=x0-i2+C.yyy;vec3 x3=x0-D.yyy;i=mod289(i);vec4 p=permute(permute(permute(i.z+vec4(0.0,i1.z,i2.z,1.0))+i.y+vec4(0.0,i1.y,i2.y,1.0))+i.x+vec4(0.0,i1.x,i2.x,1.0));float n_=0.142857142857;vec3 ns=n_*D.wyz-D.xzx;vec4 j=p-49.0*floor(p*ns.z*ns.z);vec4 x_=floor(j*ns.z);vec4 y_=floor(j-7.0*x_);vec4 x=x_*ns.x+ns.yyyy;vec4 y=y_*ns.x+ns.yyyy;vec4 h=1.0-abs(x)-abs(y);vec4 b0=vec4(x.xy,y.xy);vec4 b1=vec4(x.zw,y.zw);vec4 s0=floor(b0)*2.0+1.0;vec4 s1=floor(b1)*2.0+1.0;vec4 sh=-step(h,vec4(0.0));vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;vec3 p0=vec3(a0.xy,h.x);vec3 p1=vec3(a0.zw,h.y);vec3 p2=vec3(a1.xy,h.z);vec3 p3=vec3(a1.zw,h.w);vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;vec4 m=max(0.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.0);m=m*m;return 42.0*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));}',
+      'float desloc(vec3 p){ return snoise(p*0.9 + vec3(uT*0.18)) * (uForca + uRolagem*0.25) + snoise(p*2.2 - vec3(uT*0.12))*0.06; }',
+      'void main(){',
+      '  vec3 p = position; float d = desloc(normalize(p)); vec3 np = p + normal * d;',
+      '  float e = 0.01; vec3 t = normalize(cross(normal, vec3(0.0,1.0,0.0)+0.001)); vec3 b = normalize(cross(normal,t));',
+      '  vec3 pt = (p+t*e) + normal*desloc(normalize(p+t*e)); vec3 pb = (p+b*e) + normal*desloc(normalize(p+b*e));',
+      '  vN = normalize(normalMatrix * normalize(cross(pt-np, pb-np))); vD = d;',
+      '  vec4 mv = modelViewMatrix * vec4(np,1.0); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }'
+    ].join('\n');
+    var frag = [
+      'varying vec3 vN; varying vec3 vV; varying float vD;',
+      'void main(){',
+      '  vec3 n = normalize(vN); float fres = pow(1.0 - max(dot(n, vV), 0.0), 2.2);',
+      '  vec3 perola = vec3(0.98,0.94,0.92); vec3 rosa = vec3(0.91,0.74,0.70); vec3 pet = vec3(0.06,0.23,0.23); vec3 ouro=vec3(0.95,0.82,0.66);',
+      '  vec3 L = normalize(vec3(0.5,0.8,0.6)); float dif = max(dot(n,L),0.0);',
+      '  vec3 c = mix(rosa, perola, dif*0.8 + vD*0.6);',
+      '  c = mix(c, ouro, smoothstep(0.15,0.45,vD)*0.35);',
+      '  c += pow(max(dot(reflect(-L,n), vV),0.0), 28.0) * 0.45;',
+      '  c = mix(c, pet, fres*0.55);',
+      '  gl_FragColor = vec4(c, 1.0); }'
+    ].join('\n');
+    var mesh = new THREE.Mesh(new THREE.IcosahedronGeometry(1.6, 64), new THREE.ShaderMaterial({uniforms:uni, vertexShader:vert, fragmentShader:frag}));
+    scene.add(mesh);
+    /* A forma acompanha a rolagem: cada seção tem uma posição/tamanho, e ela desliza entre elas */
+    var paradas = [
+      ['.hero',        { x: 1.1, y: .45, s: .8 }],
+      ['.manifesto',   { x: 0,   y: 0,   s: 1.15 }],
+      ['.tratamentos', { x:-3.4, y:-1.1, s: .42 }],
+      ['.metodo',      { x: 3.3, y: 1.0, s: .55 }],
+      ['.sobre',       { x:-3.3, y: .9,  s: .6 }],
+      ['.final',       { x: 0,   y: .1,  s: 1.0 }]
+    ].map(function(p){ return { el: document.querySelector(p[0]), v: p[1] }; }).filter(function(p){ return p.el; });
+    function alvoRolagem(){
+      var meio = window.scrollY + window.innerHeight/2, pts = paradas.map(function(p){ var r = p.el.getBoundingClientRect(); return { c: r.top + window.scrollY + Math.min(r.height, window.innerHeight)/2, v: p.v }; });
+      if (meio <= pts[0].c) return pts[0].v;
+      for (var i=0;i<pts.length-1;i++){
+        if (meio <= pts[i+1].c){
+          var k = (meio - pts[i].c) / (pts[i+1].c - pts[i].c); k = k*k*(3-2*k);
+          return { x: pts[i].v.x + (pts[i+1].v.x-pts[i].v.x)*k, y: pts[i].v.y + (pts[i+1].v.y-pts[i].v.y)*k, s: pts[i].v.s + (pts[i+1].v.s-pts[i].v.s)*k };
+        }
+      }
+      return pts[pts.length-1].v;
+    }
+    var aspecto = 1;
+    function posicionar(){
+      var w = canvas.clientWidth, h = canvas.clientHeight;
+      renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix();
+      aspecto = Math.min(1, (w/h) / 1.8);
+    }
+    posicionar(); window.addEventListener('resize', posicionar);
+    var mx = 0, my = 0, ultimoY = window.scrollY, impulso = 0, giro = 0;
+    window.addEventListener('pointermove', function(e){ mx = e.clientX/window.innerWidth - .5; my = e.clientY/window.innerHeight - .5; }, {passive:true});
+    var atual = alvoRolagem(), t0 = performance.now();
+    (function quadro(){
+      requestAnimationFrame(quadro);
+      var t = (performance.now()-t0)/1000;
+      var dy = window.scrollY - ultimoY; ultimoY = window.scrollY;
+      impulso += (Math.min(Math.abs(dy)*.012, .45) - impulso) * .08;   // quanto mais rápido rola, mais a forma ondula
+      giro += dy * .0016;                                              // e gira junto com a rolagem
+      var alvo = alvoRolagem(), f = reduz ? 1 : .07;
+      atual.x += (alvo.x - atual.x)*f; atual.y += (alvo.y - atual.y)*f; atual.s += (alvo.s - atual.s)*f;
+      var estreito = window.innerWidth < 860;
+      mesh.position.set(atual.x*aspecto*(estreito?.7:1), atual.y + (estreito?.6:0), -1);
+      mesh.scale.setScalar(atual.s*(estreito?.75:1));
+      uni.uT.value = reduz ? 0 : t;
+      uni.uForca.value = .3 + (reduz ? 0 : impulso);
+      uni.uRolagem.value += (Math.min(window.scrollY/window.innerHeight,1) - uni.uRolagem.value)*.06;
+      mesh.rotation.y += ((mx*.5 + giro + t*.05*(reduz?0:1)) - mesh.rotation.y)*.06;
+      mesh.rotation.x += ((my*.4 + giro*.4) - mesh.rotation.x)*.06;
+      renderer.render(scene, camera);
+    })();
+  } catch(e) { /* sem WebGL: o hero continua completo sem a forma */ }
+
+  if (!window.gsap || reduz) return;
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.hero h1 .linha > span', {yPercent:110, duration:1.2, ease:'power4.out', stagger:.1, delay:.1});
+  gsap.from('.hero .tags, .hero .sub, .hero .acoes', {y:20, opacity:.2, duration:1, ease:'power3.out', stagger:.1, delay:.5});
+  gsap.fromTo('.hero .retrato img', {clipPath:'inset(100% 0% 0% 0%)'}, {clipPath:'inset(0% 0% 0% 0%)', duration:1.4, ease:'power4.inOut', delay:.2, clearProps:'clipPath'});
+  gsap.from('.hero .retrato .nota', {y:30, opacity:.2, duration:1, ease:'power3.out', delay:1});
+  gsap.to('.hero .retrato img', {yPercent:-8, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+  gsap.utils.toArray('.cartao').forEach(function(el, i){
+    gsap.from(el, {y:60, opacity:.2, duration:1, ease:'power3.out', delay:(i%3)*.08, scrollTrigger:{trigger:el, start:'top 92%'}});
+  });
+  gsap.from('.tecnologia .video', {scale:.85, borderRadius:'40px', duration:1.3, ease:'power3.out', scrollTrigger:{trigger:'.tecnologia', start:'top 75%'}});
+  gsap.utils.toArray('.pilar, .qa > div, .etapas li, .numeros > div').forEach(function(el){
+    gsap.from(el, {y:36, opacity:.2, duration:.9, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 92%'}});
+  });
+  gsap.fromTo('.sobre .foto img', {clipPath:'inset(0% 0% 100% 0%)'}, {clipPath:'inset(0% 0% 0% 0%)', duration:1.4, ease:'power4.inOut', clearProps:'clipPath', scrollTrigger:{trigger:'.sobre', start:'top 75%'}});
+  /* Manifesto: palavras acendem uma a uma conforme a rolagem */
+  var frase = document.getElementById('frase');
+  if (frase){
+    var html = '';
+    frase.childNodes.forEach(function(n){
+      var rosa = n.nodeType === 1;
+      (n.textContent).split(/(\s+)/).forEach(function(w){ html += /^\s+$/.test(w) || !w ? w : '<span class="p' + (rosa ? ' rosa' : '') + '">' + w + '</span>'; });
+    });
+    frase.innerHTML = html;
+    gsap.to('#frase .p', {opacity:1, stagger:.08, ease:'none', scrollTrigger:{trigger:'.manifesto', start:'top top', end:'+=120%', pin:true, scrub:.6}});
+  }
+  /* Faixa corre para o lado enquanto a página desce */
+  gsap.fromTo('#faixa', {xPercent:0}, {xPercent:-38, ease:'none', scrollTrigger:{trigger:'.faixa', start:'top bottom', end:'bottom top', scrub:.5}});
+  /* Fotos com leve paralaxe */
+  gsap.utils.toArray('.metodo .foto img, .sobre .foto img').forEach(function(img){
+    gsap.fromTo(img, {yPercent:6}, {yPercent:-6, ease:'none', scrollTrigger:{trigger:img, start:'top bottom', end:'bottom top', scrub:true}});
+  });
+  window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
+})();
+</script>
+
+</body>
+</html>
