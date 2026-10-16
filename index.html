@@ -3,14 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://www.alessandraelviraestetica.com/">
+<link rel="canonical" href="https://alessandraelviraestetica.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Alessandra Elvira Estética">
 <meta property="og:description" content="Estética regenerativa com protocolos individualizados: drenagem linfática, protocolos corporais, botox, preenchimentos e bioestimuladores. Agende sua avaliação pelo WhatsApp.">
-<meta property="og:url" content="https://www.alessandraelviraestetica.com/">
-<meta property="og:image" content="https://www.alessandraelviraestetica.com/assets/alessandra.webp">
+<meta property="og:url" content="https://alessandraelviraestetica.com/">
+<meta property="og:image" content="https://alessandraelviraestetica.com/assets/alessandra.webp">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/favicon.png">
+<meta property="og:site_name" content="Alessandra Elvira Estética">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0f3a3a">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Alessandra Elvira Estética","url":"https://alessandraelviraestetica.com/"}</script>
 <title>Alessandra Elvira Estética</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Estética regenerativa com protocolos individualizados: drenagem linfática, protocolos corporais, botox, preenchimentos e bioestimuladores. Agende sua avaliação pelo WhatsApp.">
@@ -83,6 +88,10 @@ main,footer{position:relative;z-index:1}
 .hero .retrato .nota{position:absolute;left:-34px;bottom:34px;background:var(--porcelana);border-radius:18px;padding:16px 20px;box-shadow:0 20px 50px rgba(15,58,58,.14);display:grid;gap:2px}
 .hero .retrato .nota b{font-family:var(--f-display);font-size:2.4rem;font-weight:400;line-height:1}
 .hero .retrato .nota span{font-size:.78rem;color:var(--petroleo-2);max-width:16ch;line-height:1.3}
+.hero .retrato .selo3d{position:absolute;left:-74px;top:26px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#1f5b5a 0%,var(--petroleo) 70%);box-shadow:0 24px 60px rgba(15,58,58,.35);z-index:2}
+.selo3d canvas{width:100%;height:100%;display:block}
+.logo3d-final{display:block;width:min(440px,92%);aspect-ratio:3/2;height:auto}
+@media (max-width:860px){.hero .retrato .selo3d{left:auto;right:-10px;top:-24px;width:140px;height:140px}}
 @media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero .retrato{justify-self:start;width:min(100%,360px)}.hero .retrato .nota{left:auto;right:-8px}}
 
 /* Manifesto: palavras acendem com a rolagem */
@@ -236,6 +245,7 @@ footer a:hover{color:var(--rosa)}
       </div>
       <div class="retrato">
         <img src="assets/alessandra.webp" alt="Alessandra Elvira realizando drenagem em sua clínica" width="1087" height="1447" fetchpriority="high">
+        <div class="selo3d"><canvas id="logo3d-hero" role="img" aria-label="Logo Alessandra Elvira Estética de Resultados"></canvas></div>
         <div class="nota"><b>9 anos</b><span>dedicados à estética regenerativa</span></div>
       </div>
     </div>
@@ -369,6 +379,7 @@ footer a:hover{color:var(--rosa)}
 
   <section class="final" aria-labelledby="titulo-final">
     <div class="wrap">
+      <canvas id="logo3d-final" class="logo3d-final" role="img" aria-label="Logo Alessandra Elvira Estética de Resultados"></canvas>
       <p class="eyebrow">Não sabe qual tratamento escolher?</p>
       <h2 id="titulo-final">Seu momento de cuidado pode <em>começar aqui.</em></h2>
       <p>Você não precisa decidir sozinha. O primeiro passo é entender suas necessidades e objetivos.</p>
@@ -470,7 +481,7 @@ footer a:hover{color:var(--rosa)}
       ['.tratamentos', { x:-3.4, y:-1.1, s: .42 }],
       ['.metodo',      { x: 3.3, y: 1.0, s: .55 }],
       ['.sobre',       { x:-3.3, y: .9,  s: .6 }],
-      ['.final',       { x: 0,   y: .1,  s: 1.0 }]
+      ['.final',       { x: 3.6, y: -.8, s: .5 }]
     ].map(function(p){ return { el: document.querySelector(p[0]), v: p[1] }; }).filter(function(p){ return p.el; });
     function alvoRolagem(){
       var meio = window.scrollY + window.innerHeight/2, pts = paradas.map(function(p){ var r = p.el.getBoundingClientRect(); return { c: r.top + window.scrollY + Math.min(r.height, window.innerHeight)/2, v: p.v }; });
@@ -512,6 +523,71 @@ footer a:hover{color:var(--rosa)}
       renderer.render(scene, camera);
     })();
   } catch(e) { /* sem WebGL: o hero continua completo sem a forma */ }
+
+  /* ---------- Logo em 3D: camadas empilhadas dão volume, com brilho que passa pela frente ---------- */
+  function logo3D(canvas, opts){
+    try {
+      if (!window.THREE || !canvas) return;
+      var r = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
+      r.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      var cena = new THREE.Scene(), cam = new THREE.PerspectiveCamera(30, 1, .1, 50); cam.position.z = 6;
+      var grupo = new THREE.Group(); cena.add(grupo);
+      var tex = new THREE.TextureLoader().load(opts.src, function(){ pronto = true; });
+      tex.anisotropy = 4;
+      var pronto = false, N = opts.camadas || 26, prof = opts.profundidade || .18;
+      var largura = opts.largura || 2.6, altura = largura / (opts.proporcao || 1);
+      var geo = new THREE.PlaneGeometry(largura, altura);
+      var frag = [
+        'uniform sampler2D map; uniform float uCamada; uniform float uT; uniform vec3 uLado; uniform float uFrente;',
+        'varying vec2 vUv;',
+        'void main(){',
+        '  vec4 c = texture2D(map, vUv); if (c.a < 0.35) discard;',
+        '  vec3 cor;',
+        '  if (uFrente > 0.5) {',
+        '    cor = c.rgb * 1.08;',
+        '    float faixa = vUv.x*0.8 + (1.0 - vUv.y)*0.45 - mod(uT*0.32, 2.6) + 0.6;',
+        '    cor += vec3(1.0, 0.95, 0.9) * smoothstep(0.09, 0.0, abs(faixa)) * 0.85;',
+        '  } else {',
+        '    cor = mix(uLado*0.45, uLado, uCamada) * mix(vec3(1.0), c.rgb, 0.25);',
+        '  }',
+        '  gl_FragColor = vec4(cor, 1.0); }'
+      ].join('\n');
+      var vert = 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }';
+      var mats = [];
+      for (var i=0;i<N;i++){
+        var k = i/(N-1);
+        var m = new THREE.ShaderMaterial({ vertexShader:vert, fragmentShader:frag, side:THREE.DoubleSide,
+          uniforms:{ map:{value:tex}, uCamada:{value:k}, uT:{value:0}, uLado:{value:new THREE.Color(opts.lado)}, uFrente:{value: i===N-1 ? 1 : 0} } });
+        var p = new THREE.Mesh(geo, m); p.position.z = -prof/2 + prof*k; grupo.add(p); mats.push(m);
+      }
+      // verso: mesma arte, para não ficar oco quando gira
+      var verso = new THREE.Mesh(geo, new THREE.ShaderMaterial({ vertexShader:vert, fragmentShader:frag, side:THREE.BackSide,
+        uniforms:{ map:{value:tex}, uCamada:{value:1}, uT:{value:0}, uLado:{value:new THREE.Color(opts.lado)}, uFrente:{value:1} } }));
+      verso.position.z = -prof/2 - .001; grupo.add(verso); mats.push(verso.material);
+      function tam(){ var w = canvas.clientWidth, h = canvas.clientHeight; r.setSize(w, h, false); cam.aspect = w/h; cam.updateProjectionMatrix();
+        var vis = 2*Math.tan(15*Math.PI/180)*6, cabe = Math.min(vis*cam.aspect/largura, vis/altura) * (opts.ocupa || .82); grupo.scale.setScalar(cabe); }
+      tam(); window.addEventListener('resize', tam);
+      var mx = 0, my = 0; window.addEventListener('pointermove', function(e){ mx = e.clientX/window.innerWidth-.5; my = e.clientY/window.innerHeight-.5; }, {passive:true});
+      var visivel = false; new IntersectionObserver(function(en){ visivel = en[0].isIntersecting; }).observe(canvas);
+      var entrada = 0, t0 = performance.now(), ultimoY = window.scrollY, giro = 0;
+      (function q(){
+        requestAnimationFrame(q);
+        var dy = window.scrollY - ultimoY; ultimoY = window.scrollY; giro += dy*.004;
+        if (!visivel || !pronto) return;
+        var t = (performance.now()-t0)/1000;
+        entrada += (1 - entrada) * (reduz ? 1 : .035);
+        var e = 1 - Math.pow(1-entrada, 3);
+        var balanco = reduz ? 0 : Math.sin(t*.7)*.32;
+        grupo.rotation.y = (1-e)*-Math.PI*2 + balanco + mx*.4 + Math.sin(giro)*.3;
+        grupo.rotation.x = my*.35 + (reduz ? 0 : Math.sin(t*.5)*.08);
+        grupo.position.y = reduz ? 0 : Math.sin(t*1.1)*.06;
+        for (var i=0;i<mats.length;i++) mats[i].uniforms.uT.value = reduz ? 1 : t;
+        r.render(cena, cam);
+      })();
+    } catch(err) { /* sem WebGL: o restante da página segue normal */ }
+  }
+  logo3D(document.getElementById('logo3d-hero'), {src:'assets/logo3d.webp', proporcao:1000/663, lado:0xb87a70, ocupa:.9, camadas:30, profundidade:.12});
+  logo3D(document.getElementById('logo3d-final'), {src:'assets/logo3d.webp', proporcao:1000/663, lado:0x8f5c55, ocupa:.92, camadas:36, profundidade:.12});
 
   if (!window.gsap || reduz) return;
   gsap.registerPlugin(ScrollTrigger);
